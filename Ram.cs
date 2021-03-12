@@ -14,7 +14,18 @@ namespace GarysGarage
 
         public override void Drive()
         {
-            Console.WriteLine("Oink! Oink!");
+            Console.WriteLine($"The {MainColor} Ram drives by. Weeeeee!");
+
+        }
+
+        public override void Turn(string direction)
+        {
+            Console.WriteLine($"The vehicle violently turns to the {direction}");
+        }
+
+        public override void Stop()
+        {
+            Console.WriteLine("The vehicle grinds to a halt!");
         }
     }
 }
