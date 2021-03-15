@@ -1,14 +1,22 @@
 using System;
+using System.Collections.Generic;
 
 namespace GarysGarage
 {
-    public class Cessna : Vehicle
+    public class Cessna : Vehicle, IGasoline
     {
+        public string Name { get; } = "Cessna";
         public double FuelCapacity { get; set; }
+
+        public List<string> Gasoline { get; }
+
+        public int CurrentTankPercentage { get; } = 20;
 
         public void RefuelTank()
         {
-            // method definition omitted
+            Console.WriteLine("Filling up the tank!");
+            int CurrentTankPercentage = 100;
+            Console.WriteLine($"The {Name}'s fuel tank is now at {CurrentTankPercentage} percent.");
         }
 
         public override void Drive()
